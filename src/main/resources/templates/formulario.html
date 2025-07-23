@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Persona</title>
+    <link rel="stylesheet" href="/css/estilo.css" />
+</head>
+<body>
+<div class="form-wrapper">
+    <form th:action="@{/formulario}" th:object="${personForum}" method="post" class="contact-form">
+
+        <h1>Formulario de Contacto</h1>
+
+        <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" th:field="*{nombre}" />
+            <span class="error" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" th:field="*{telefono}" />
+            <span class="error" th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="conocido">¿Cómo nos conociste?</label>
+            <select id="conocido" th:field="*{conocido}">
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="linkedin">LinkedIn</option>
+                <option value="contactos">Contactos</option>
+                <option value="redes">Redes Sociales</option>
+                <option value="buscador">Buscador (Google, Bing...)</option>
+                <option value="otros">Otros</option>
+            </select>
+            <span class="error" th:if="${#fields.hasErrors('conocido')}" th:errors="*{conocido}"></span>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+</body>
+</html>

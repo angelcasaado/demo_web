@@ -1,0 +1,77 @@
+/* Estilo base */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor centrado */
+.form-wrapper {
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Título */
+.contact-form h1 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+}
+
+/* Campos */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: 500;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.3s border-color;
+}
+
+input:focus, select:focus {
+  border-color: #0077ff;
+  outline: none;
+}
+
+/* Botón */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s background;
+}
+
+button:hover {
+  background-color: #005fd1;
+}
